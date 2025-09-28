@@ -1,0 +1,16 @@
+name: Hardware Heroes Workflow
+on:
+  push:
+    branches: [ main ]
+jobs:
+  hardware-detection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          pip install psutil
+      - name: Detect Hardware
+        run: |
+          python3 -u detect_hardware.py
