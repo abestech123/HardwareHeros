@@ -14,4 +14,3 @@ jobs:
           pip install psutil
       - name: Detect Hardware
         run: |
-          python3 ../detect_hardware.py
