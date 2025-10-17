@@ -3,6 +3,7 @@ name: Hardware Heroes Workflow
 on:
   push:
     branches: [ main ]
+     workflow_dispatch:
 jobs:
   hardware-detection:
     runs-on: ubuntu-latest
